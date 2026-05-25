@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema Anti-DMP</title>
+  <meta name="description" content="Sistema Anti-DMP: protocolos práticos para libido, firmeza, energia e confiança masculina." />
+  <style>
+    :root{
+      --bg:#030504;--bg2:#090d0b;--card:#0d1110;--card2:#141817;
+      --green:#4cff45;--green2:#19c947;--red:#41020c;--red2:#b00018;
+      --white:#f7fff7;--muted:#aeb8b1;--line:rgba(76,255,69,.22);
+      --shadow:0 0 34px rgba(76,255,69,.28);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:
+      radial-gradient(circle at 50% 0%, rgba(76,255,69,.10), transparent 28%),
+      radial-gradient(circle at 50% 35%, rgba(170,0,26,.24), transparent 44%),
+      linear-gradient(180deg,#020302 0%, #060606 46%, #130006 100%);color:var(--white)}
+    a{text-decoration:none;color:inherit}.wrap{width:min(100%,480px);margin:0 auto;padding:0 18px}
+    .topline{height:4px;background:linear-gradient(90deg,transparent,var(--green),transparent);opacity:.9}
+    .pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);color:var(--green);background:rgba(76,255,69,.07);border-radius:999px;padding:8px 14px;font-size:12px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;box-shadow:0 0 18px rgba(76,255,69,.14)}
+    section{padding:34px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+    .hero{padding:42px 0 30px;text-align:center;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:-80px -40px auto -40px;height:340px;background:radial-gradient(circle,rgba(76,255,69,.13),transparent 56%);filter:blur(8px);z-index:-1}
+    h1,h2,h3,p{margin:0}h1{margin-top:18px;font-size:43px;line-height:.96;font-weight:950;letter-spacing:-1.6px;text-transform:uppercase}h1 .green,h2 .green,.green{color:var(--green);text-shadow:0 0 22px rgba(76,255,69,.38)}
+    .sub{margin:18px auto 0;font-size:19px;line-height:1.35;color:#e9f2eb;font-weight:700;max-width:430px}.sub strong{color:#fff}.micro{margin-top:10px;color:var(--muted);font-size:13px;line-height:1.45}
+    .ticks{display:grid;gap:10px;margin:26px 0 0;text-align:left}.tick{display:flex;gap:11px;align-items:flex-start;font-weight:800;font-size:17px;color:#f3fff5}.check{width:25px;height:25px;min-width:25px;border-radius:50%;display:grid;place-items:center;color:#051006;background:linear-gradient(180deg,var(--green),var(--green2));font-weight:950;box-shadow:0 0 18px rgba(76,255,69,.35)}
+    .cta{display:block;width:100%;margin:26px auto 0;padding:20px 18px;border-radius:18px;background:linear-gradient(180deg,#67ff51 0%,#17bb42 100%);color:#041004;font-size:22px;font-weight:950;text-align:center;text-transform:uppercase;letter-spacing:.2px;box-shadow:var(--shadow), inset 0 2px 0 rgba(255,255,255,.28);border:1px solid rgba(255,255,255,.18);cursor:pointer}.cta span{display:block;font-size:13px;margin-top:5px;letter-spacing:.06em;color:#052608}
+    .price{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:#cfe6d2;font-size:14px;font-weight:700}.price b{color:#fff;font-size:20px}
+    .strip{margin-top:24px;padding:13px;border:1px solid rgba(76,255,69,.18);border-radius:16px;background:linear-gradient(180deg,rgba(76,255,69,.08),rgba(255,255,255,.02));color:#d9f3dc;font-size:14px;line-height:1.45}
+    h2{font-size:32px;line-height:1.03;text-align:center;text-transform:uppercase;letter-spacing:-.8px;font-weight:950}.lead{margin:12px auto 0;text-align:center;color:#d9e2dc;font-size:17px;line-height:1.42;max-width:420px}
+    .ebooks{display:grid;gap:14px;margin-top:26px}.ebook{position:relative;display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:center;padding:15px;border:1px solid rgba(76,255,69,.16);border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:0 10px 30px rgba(0,0,0,.25);overflow:hidden}.ebook:after{content:"";position:absolute;inset:auto -20% -40% 30%;height:80%;background:radial-gradient(circle,rgba(76,255,69,.10),transparent 60%);pointer-events:none}
+    .cover{height:126px;border-radius:10px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.16);box-shadow:12px 12px 0 rgba(0,0,0,.55),0 0 20px rgba(76,255,69,.10);background:#0b0b0b}
+    .cover img{width:100%;height:100%;object-fit:cover;display:block}
+    .cover:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02) 0%,rgba(0,0,0,.10) 45%,rgba(0,0,0,.58) 100%);z-index:1;pointer-events:none}
+    .cover .ct,.cover .flare{display:none}
+    .ebook h3{font-size:20px;line-height:1.08;text-transform:uppercase;font-weight:950;letter-spacing:-.3px}.ebook p{margin-top:7px;color:#d0dad3;font-size:14px;line-height:1.38;font-weight:600}.tag{display:inline-flex;margin-top:10px;color:var(--green);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    .benefits{display:grid;gap:12px;margin-top:24px}.benefit{padding:18px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid rgba(76,255,69,.14)}.benefit strong{display:block;font-size:19px;text-transform:uppercase;line-height:1.1}.benefit p{margin-top:7px;color:#cbd6cf;font-size:14px;line-height:1.4}
+    .steps{display:grid;gap:12px;margin-top:22px;counter-reset:item}.step{padding:17px 17px 17px 62px;border-radius:18px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.08);position:relative}.step:before{counter-increment:item;content:counter(item);position:absolute;left:17px;top:17px;width:30px;height:30px;border-radius:50%;background:var(--green);color:#051006;display:grid;place-items:center;font-weight:950}.step b{font-size:17px;text-transform:uppercase}.step p{margin-top:4px;color:#cbd6cf;font-size:14px;line-height:1.38}
+    .guarantee{border:1px solid rgba(76,255,69,.24);border-radius:22px;padding:22px;background:linear-gradient(180deg,rgba(76,255,69,.08),rgba(255,255,255,.025));text-align:center;box-shadow:0 0 26px rgba(76,255,69,.10)}.seal{width:64px;height:64px;margin:0 auto 12px;border-radius:50%;background:linear-gradient(180deg,var(--green),var(--green2));display:grid;place-items:center;color:#041004;font-size:34px;font-weight:950;box-shadow:var(--shadow)}.guarantee h2{font-size:27px}
+    .footer{padding:26px 0 32px;color:#87928b;text-align:center;font-size:11px;line-height:1.45}.footer a{text-decoration:underline;color:#a6b3aa}.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 14px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.92) 22%,rgba(0,0,0,.98));display:none}.sticky a{width:min(100%,440px);margin:0 auto;padding:15px;border-radius:14px;font-size:16px}@media(max-width:480px){.sticky{display:block}body{padding-bottom:78px}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <main>
+    <section class="hero"><div class="wrap"><div class="pill">Sistema Anti-DMP</div><h1>Recupere sua <span class="green">libido</span>, firmeza e confiança masculina</h1><p class="sub">Protocolos práticos para você saber exatamente <strong>o que fazer, quando fazer e como aplicar</strong>.</p><div class="ticks"><div class="tick"><span class="check">✓</span><span>Sem remédios ou fórmulas milagrosas</span></div><div class="tick"><span class="check">✓</span><span>Aplicação simples, direta e objetiva</span></div><div class="tick"><span class="check">✓</span><span>Foco em libido, energia, firmeza e controle</span></div></div><a class="cta linkCampanha" href="#">QUERO COMEÇAR AGORA <span>Acesso imediato ao Sistema Anti-DMP</span></a><div class="price">Oferta especial de hoje: <b>R$19,00</b></div><div class="strip">Esta página existe para mostrar exatamente o que você recebe ao ativar seu acesso. Sem enrolação. Sem conteúdo solto. Apenas um sistema organizado para aplicar.</div></div></section>
+    <section><div class="wrap"><h2>Aqui está o que você vai <span class="green">receber</span></h2><p class="lead">Cinco entregáveis práticos que formam o Sistema Anti-DMP.</p><div class="ebooks">
+      <div class="ebook"><div class="cover"><img src="/protocolo-manha.png" alt="Capa Protocolo Não Faça Isso na Manhã"></div><div><h3>Protocolo “Não Faça Isso na Manhã”</h3><p>O erro matinal que pode comprometer energia, foco e resposta masculina pelo resto do dia.</p><span class="tag">Base diária</span></div></div>
+      <div class="ebook"><div class="cover"><img src="/codigo-libido.png" alt="Capa Código da Libido no TALO"></div><div><h3>Código da Libido no TALO</h3><p>Passos para recuperar desejo, estímulo e vontade de voltar a se sentir presente na hora H.</p><span class="tag">Desejo sexual</span></div></div>
+      <div class="ebook"><div class="cover"><img src="/guia-nutrientes.png" alt="Capa Guia de Nutrientes e Ativadores"></div><div><h3>Guia de Nutrientes e Ativadores</h3><p>Alimentos e compostos naturais para apoiar energia, circulação e vitalidade masculina.</p><span class="tag">Suporte natural</span></div></div>
+      <div class="ebook"><div class="cover"><img src="/plano-erecao-forte.png" alt="Capa Plano Ereção Forte"></div><div><h3>Plano Ereção Forte</h3><p>Um plano progressivo para sair do modo bloqueio e voltar a se preparar com mais controle.</p><span class="tag">Modo performance</span></div></div>
+      <div class="ebook"><div class="cover"><img src="/confianca-exala.png" alt="Capa Fórmula Confiança que Exala"></div><div><h3>Fórmula Confiança que Exala</h3><p>O ajuste mental e comportamental para parar de duvidar de si e agir com mais presença.</p><span class="tag">Controle mental</span></div></div>
+    </div><a class="cta linkCampanha" href="#">ATIVAR SISTEMA ANTI-DMP <span>Receber todos os módulos agora</span></a></div></section>
+    <section><div class="wrap"><h2>Não é teoria. É <span class="green">execução</span>.</h2><p class="lead">A ideia é simples: parar de adivinhar e seguir uma sequência clara.</p><div class="steps"><div class="step"><b>Leia o protocolo certo</b><p>Escolha o módulo de acordo com seu momento: manhã, libido, nutrientes, ereção ou confiança.</p></div><div class="step"><b>Aplique sem complicar</b><p>Instruções curtas, práticas e pensadas para homens que querem agir sem perder tempo.</p></div><div class="step"><b>Repita e acompanhe sua evolução</b><p>Consistência é o que transforma conhecimento em resultado percebido no dia a dia.</p></div></div></div></section>
+    <section><div class="wrap"><h2>O que muda quando você <span class="green">aplica</span></h2><div class="benefits"><div class="benefit"><strong>Mais desejo</strong><p>Você entende os estímulos que ajudam seu corpo a voltar a priorizar libido.</p></div><div class="benefit"><strong>Mais firmeza e controle</strong><p>Protocolos para reduzir pressão mental e preparar melhor seu corpo para a hora H.</p></div><div class="benefit"><strong>Mais energia masculina</strong><p>Ajustes simples para rotina, sono, alimentação e movimento diário.</p></div><div class="benefit"><strong>Mais confiança</strong><p>Você para de agir no improviso e passa a seguir um plano claro.</p></div></div><a class="cta linkCampanha" href="#">QUERO MEU ACESSO AGORA <span>Oferta disponível por tempo limitado</span></a></div></section>
+    <section><div class="wrap"><div class="guarantee"><div class="seal">✓</div><h2>Acesso imediato e compra segura</h2><p class="lead">Após confirmar o pedido, você recebe o acesso ao Sistema Anti-DMP e pode começar ainda hoje.</p><a class="cta linkCampanha" href="#">SIM, QUERO COMEÇAR HOJE <span>Ir para o checkout seguro</span></a><p class="micro">Produto digital informativo. Não substitui orientação médica. Resultados podem variar de pessoa para pessoa.</p></div></div></section>
+  </main>
+  <div class="sticky"><a class="cta linkCampanha" href="#">ATIVAR AGORA</a></div>
+  <footer class="footer"><div class="wrap">Sistema Anti-DMP © Todos os direitos reservados.<br>Este produto é informativo e não é medicamento. Não promete diagnóstico, tratamento ou cura.</div></footer>
+<script>
+(function(){
+  const checkoutBase = 'https://checkout.payt.com.br/57dc8c153bbb35ccee542cf777a52208';
+  const params = new URLSearchParams(window.location.search);
+  const checkout = new URL(checkoutBase);
+  ['utm_source','utm_campaign'].forEach(function(key){
+    const value = params.get(key);
+    if(value) checkout.searchParams.set(key, value);
+  });
+  document.querySelectorAll('.linkCampanha').forEach(function(btn){
+    btn.style.cursor = 'pointer';
+    btn.setAttribute('href', checkout.toString());
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      window.location.href = checkout.toString();
+    });
+  });
+})();
+</script>
+</body>
+</html>
