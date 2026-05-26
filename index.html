@@ -80,10 +80,10 @@ src="https://www.facebook.com/tr?id=27385976594373123&ev=PageView&noscript=1"
   const checkoutBase = 'https://checkout.payt.com.br/f1d7707611f6f4bc233e5c1f566ee1e4';
   const params = new URLSearchParams(window.location.search);
   const checkout = new URL(checkoutBase);
-  ['utm_source','utm_campaign'].forEach(function(key){
-    const value = params.get(key);
-    if(value) checkout.searchParams.set(key, value);
-  });
+  params.forEach(function(value, key){
+  checkout.searchParams.set(key, value);
+});
+    
   document.querySelectorAll('.linkCampanha').forEach(function(btn){
     btn.style.cursor = 'pointer';
     btn.setAttribute('href', checkout.toString());
